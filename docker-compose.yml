@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  app:
+    container_name: 'transactions-history'
+    build:
+      context: ./
+    restart: unless-stopped
+    volumes:
+      - ./:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+      - ./logs:/home/node/.npm/_logs
+    ports:
+      - "3000:3000"
+    networks:
+      - stori-transactions-history-network
+
+networks:
+  stori-transactions-history-network:
+    external: true
+
+volumes:
+  node_modules:
