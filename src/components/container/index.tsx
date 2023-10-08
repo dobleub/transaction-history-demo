@@ -1,6 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
-export const Container = ({ className, children }: any) => {
-    const classes = `min-h-screen flex flex-col ${className}`;
+import React from "react";
 
-    return <div className={classes}>{children}</div>;
+export const Container: React.FC = ({ classes, children }: any) => {
+    const newClasses = `min-h-screen flex flex-col ${classes}`;
+
+    return <div className={newClasses}>{children}</div>;
 };

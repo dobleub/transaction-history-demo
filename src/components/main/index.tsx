@@ -1,5 +1,13 @@
 import React from "react";
 
+import {
+    StarOfLifeIcon,
+    CreditCardIcon,
+    WalletIcon,
+    MoneyBillIcon,
+    ArrowRightIcon,
+} from "@icons";
+
 export const Main: React.FC = () => {
     return (
         <main className="container mx-w-6xl mx-auto py-4">
@@ -23,23 +31,27 @@ export const Main: React.FC = () => {
                                         Derol's Account
                                     </h2>
                                     <div className="flex items-center gap-4">
-                                        <p className="text-lg text-blue-200 tracking-wider">
-                                            **** **** 1234
+                                        <p className="text-lg text-blue-200 tracking-wider flex items-center">
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            &nbsp;
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            &nbsp;
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            <StarOfLifeIcon height="0.5em" />
+                                            &nbsp;1234
                                         </p>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="w-4 h-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                            />
-                                        </svg>
+                                        <ArrowRightIcon
+                                            height="1em"
+                                            className="text-blue-200"
+                                        />
                                     </div>
                                 </div>
                                 <h2 className="text-lg md:text-xl xl:text-3xl text-blue-50 font-black tracking-wider">
@@ -85,12 +97,8 @@ export const Main: React.FC = () => {
                                             Last Transaction 3 Hours ago
                                         </span>
                                     </div>
-                                    <div className="bg-blue-500 p-2 md:p-1 xl:p-2 rounded-md">
-                                        <img
-                                            src="assets/dish-2.png"
-                                            alt="icon"
-                                            className="w-auto h-8 md:h-6 xl:h-8 object-cover"
-                                        />
+                                    <div className="bg-blue-500 p-2 md:p-1 xl:p-2 rounded-md text-white">
+                                        <CreditCardIcon height="1.5em" />
                                     </div>
                                 </div>
                             </div>
@@ -107,12 +115,8 @@ export const Main: React.FC = () => {
                                             Last Transaction 3 Days ago
                                         </span>
                                     </div>
-                                    <div className="bg-green-500 p-2 md:p-1 xl:p-2 rounded-md">
-                                        <img
-                                            src="assets/grocery.png"
-                                            alt="icon"
-                                            className="w-auto h-8 md:h-6 xl:h-8 object-cover"
-                                        />
+                                    <div className="bg-green-500 p-2 md:p-1 xl:p-2 rounded-md text-white">
+                                        <WalletIcon height="1.5em" />
                                     </div>
                                 </div>
                             </div>
@@ -129,12 +133,8 @@ export const Main: React.FC = () => {
                                             Last Transaction 4 Days ago
                                         </span>
                                     </div>
-                                    <div className="bg-yellow-500 p-2 md:p-1 xl:p-2 rounded-md">
-                                        <img
-                                            src="assets/gaming.png"
-                                            alt="icon"
-                                            className="w-auto h-8 md:h-6 xl:h-8 object-cover"
-                                        />
+                                    <div className="bg-yellow-500 p-2 md:p-1 xl:p-2 rounded-md text-white">
+                                        <MoneyBillIcon height="1.5em" />
                                     </div>
                                 </div>
                             </div>
@@ -151,12 +151,8 @@ export const Main: React.FC = () => {
                                             Last Transaction 1 Month ago
                                         </span>
                                     </div>
-                                    <div className="bg-indigo-500 p-2 md:p-1 xl:p-2 rounded-md">
-                                        <img
-                                            src="assets/holiday.png"
-                                            alt="icon"
-                                            className="w-auto h-8 md:h-6 xl:h-8 object-cover"
-                                        />
+                                    <div className="bg-indigo-500 p-2 md:p-1 xl:p-2 rounded-md text-white">
+                                        <MoneyBillIcon height="1.5em" />
                                     </div>
                                 </div>
                             </div>
@@ -187,20 +183,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                             <li className="py-3 flex justify-between text-sm text-gray-500 font-semibold">
@@ -210,20 +192,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                             <li className="py-3 flex justify-between text-sm text-gray-500 font-semibold">
@@ -233,20 +201,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                             <li className="py-3 flex justify-between text-sm text-gray-500 font-semibold">
@@ -256,20 +210,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                             <li className="py-3 flex justify-between text-sm text-gray-500 font-semibold">
@@ -279,20 +219,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                             <li className="py-3 flex justify-between text-sm text-gray-500 font-semibold">
@@ -302,20 +228,6 @@ export const Main: React.FC = () => {
                                 <p className="px-4 text-blue-600">Food</p>
                                 <p className="md:text-base text-gray-800 flex items-center gap-2">
                                     16.90
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
                                 </p>
                             </li>
                         </ul>

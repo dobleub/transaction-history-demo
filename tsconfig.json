@@ -17,11 +17,17 @@
         "paths": {
             "@components/*": ["src/components/*"],
             "@components": ["src/components"],
+            "@hooks/*": ["src/hooks/*"],
+            "@hooks": ["src/hooks"],
+            "@icons/*": ["src/icons/*"],
+            "@icons": ["src/icons"],
             "@public/*": ["public/*"],
             "@public": ["public"],
             "@styles/*": ["src/styles/*"],
             "@styles": ["src/styles"],
-            "@i18n": ["./i18n"]
+            "@i18n": ["./i18n"],
+            "react": ["./node_modules/react"],
+            "react-dom": ["./node_modules/react-dom"]
         },
         "incremental": true
     },
