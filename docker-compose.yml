@@ -12,6 +12,7 @@ services:
       - ./logs:/home/node/.npm/_logs
     ports:
       - "3000:3000"
+      - "9231:9229"
     networks:
       - stori-transactions-history-network
 

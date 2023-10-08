@@ -23,9 +23,7 @@
             "@styles": ["src/styles"],
             "@i18n": ["./i18n"]
         },
-        "incremental": true,
-        "types": ["jest"],
-        "typeRoots": ["./types", "./node_modules/@types"]
+        "incremental": true
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]

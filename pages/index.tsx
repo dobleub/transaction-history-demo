@@ -1,13 +1,12 @@
 import React from "react";
 
-import { Cards, Container, Footer, Header, Main } from "@components";
+import { Container, Footer, Header, Main } from "@components";
 
 const Home: React.FC = () => {
     return (
-        <Container>
+        <Container className="bg-gradient-to-br from-gray-100 to-gray-100">
             <Header />
             <Main />
-            <Cards />
             <Footer />
         </Container>
     );

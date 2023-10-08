@@ -12,11 +12,12 @@ RUN yarn install
 
 ### App Stage
 FROM node:16-alpine
+ENV CHOKIDAR_USEPOLLING=true
+
 # Setting up envs
 ENV N_PATH "/usr/src/app"
 ENV N_USER "node"
 # Create app dir
-RUN npm install -g pm2
 WORKDIR ${N_PATH}
 RUN chmod -R 777 ${N_PATH}
 # Adding files to project
@@ -31,7 +32,6 @@ RUN mkdir -p /home/${N_USER}/.npm/_logs
 RUN chown -R ${N_USER}:${N_USER} /home/${N_USER}/.npm
 
 USER ${N_USER}
-# CMD [ "pm2", "logs" ]
 CMD [ "yarn", "dev" ]
 
 EXPOSE 3000 9229
