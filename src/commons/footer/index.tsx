@@ -17,6 +17,14 @@ export const Footer: React.FC = () => {
                                 >
                                     &nbsp;Edd Osorio&nbsp;
                                 </a>
+                                and
+                                <a
+                                    href="https://github.com/ejulfaey/dashboard-atom"
+                                    className="font-semibold text-slate-700"
+                                    target="_blank"
+                                >
+                                    &nbsp;Atom Dashboard&nbsp;
+                                </a>
                                 for Stori Challenge
                             </div>
                         </div>
@@ -24,7 +32,7 @@ export const Footer: React.FC = () => {
                             <ul className="flex flex-wrap justify-center pl-0 mb-0 list-none lg:justify-end">
                                 <li className="nav-item">
                                     <a
-                                        href="https://www.creative-tim.com/license"
+                                        href="https://github.com/dobleub/transaction-history-demo/blob/main/LICENSE"
                                         className="block px-4 pt-0 pb-1 pr-0 font-normal transition-colors ease-soft-in-out text-sm text-slate-500"
                                         target="_blank"
                                     >

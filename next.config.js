@@ -29,6 +29,10 @@ const nextConfig = {
         };
         return config;
     },
+    env: {
+        NEXT_PUBLIC_STORI_TRANSACTIONS_API:
+            process.env.NEXT_PUBLIC_STORI_TRANSACTIONS_API,
+    },
 };
 
 module.exports = nextConfig;

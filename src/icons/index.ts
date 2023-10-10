@@ -7,6 +7,11 @@ export { default as MoneyBillIcon } from "./solid-money-bill.svg";
 export { default as ChevronRightIcon } from "./solid-chevron-right.svg";
 export { default as ArrowRightIcon } from "./solid-arrow-right.svg";
 export { default as DesktopIcon } from "./solid-desktop.svg";
+export { default as UserIcon } from "./solid-user.svg";
+export { default as TriangleExclamation } from "./solid-triangle-exclamation.svg";
+export { default as CheckIcon } from "./solid-check.svg";
+export { default as XMarkIcon } from "./solid-xmark.svg";
+
 export { default as GearIcon } from "./regular-gear.svg";
 export { default as EnvelopeIcon } from "./regular-envelope.svg";
 export { default as BellIcon } from "./regular-bell.svg";

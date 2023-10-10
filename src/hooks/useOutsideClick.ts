@@ -4,11 +4,11 @@ interface ICallback {
     (target: HTMLElement): any;
 }
 
-export default function useOutsideClick(
+const useOutsideClick = (
     ref: RefObject<any> | MutableRefObject<any>,
     handlerOutside: ICallback,
     handlerInside: ICallback | null = null,
-): [RefObject<any> | MutableRefObject<any>, ICallback] {
+): [RefObject<any> | MutableRefObject<any>, ICallback] => {
     const handleClickOutside = useCallback(
         (event: any) => {
             const target = event.target as HTMLElement;
@@ -34,4 +34,6 @@ export default function useOutsideClick(
     }, [handleClickOutside]);
 
     return [ref, handlerOutside];
-}
+};
+
+export default useOutsideClick;

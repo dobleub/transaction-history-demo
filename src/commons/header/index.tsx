@@ -11,8 +11,12 @@ import {
     JustifyTextIcon,
 } from "@icons/index";
 import useOutsideClick from "@hooks/useOutsideClick";
+import { useRouter } from "next/router";
 
 export const Header: React.FC = () => {
+    const path = useRouter().pathname;
+    const activeClass = "bg-blue-200";
+
     const mobileMenuRef = useRef(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,7 +28,7 @@ export const Header: React.FC = () => {
                 <nav className="p-4 md:py-8 xl:px-0 md:container md:mx-w-6xl md:mx-auto w-full">
                     {/* Desktop menu */}
                     <div className="hidden lg:flex lg:justify-between lg:items-center">
-                        <a href="#" className="flex items-start gap-2 group">
+                        <a href="/" className="flex items-start gap-2 group">
                             <div className="bg-blue-600 text-white p-2 rounded-md group-hover:bg-blue-800">
                                 <DesktopIcon height="1.5em" />
                             </div>
@@ -38,10 +42,12 @@ export const Header: React.FC = () => {
                         <ul className="flex items-center space-x-4 text-sm font-semibold">
                             <li>
                                 <a
-                                    href="#"
-                                    className="px-2 xl:px-4 py-2 text-gray-800 rounded-md hover:bg-gray-200"
+                                    href="/"
+                                    className={`px-2 xl:px-4 py-2 text-gray-800 rounded-md hover:bg-gray-200 ${
+                                        path === "/" ? activeClass : ""
+                                    }`}
                                 >
-                                    My Account
+                                    Accounts
                                 </a>
                             </li>
                             <li className="relative" x-data="{ open: false }">
@@ -50,22 +56,6 @@ export const Header: React.FC = () => {
                                     className="px-2 xl:px-4 py-2 text-gray-800 rounded-md hover:bg-gray-200 flex gap-2 items-center"
                                 >
                                     Transactions
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="px-2 xl:px-4 py-2 text-gray-600 rounded-md hover:bg-gray-200"
-                                >
-                                    Cards{" "}
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="px-2 xl:px-4 py-2 text-gray-600 rounded-md hover:bg-gray-200"
-                                >
-                                    Offers
                                 </a>
                             </li>
                         </ul>
@@ -98,7 +88,7 @@ export const Header: React.FC = () => {
                                     href="#"
                                     className="text-sm font-sans text-gray-800 font-semibold tracking-wider"
                                 >
-                                    Derol Hakim
+                                    Demo
                                 </a>
                             </li>
                             <li>
@@ -112,7 +102,7 @@ export const Header: React.FC = () => {
                     </div>
                     {/* Mobile menu */}
                     <div className="lg:hidden relative flex justify-between w-full">
-                        <a href="#" className="flex items-start gap-2 group">
+                        <a href="/" className="flex items-start gap-2 group">
                             <div className="bg-blue-600 text-white p-3 rounded-md group-hover:bg-blue-800">
                                 <DesktopIcon height="1.5em" />
                             </div>
@@ -139,11 +129,13 @@ export const Header: React.FC = () => {
                                 <ul ref={mobileMenuRef} className="p-4">
                                     <li className="px-4 py-2 rounded hover:bg-gray-200">
                                         <a
-                                            href="#"
-                                            className="flex items-center gap-4"
+                                            href="/"
+                                            className={`px-2 xl:px-4 py-2 text-gray-800 rounded-md hover:bg-gray-200 ${
+                                                path === "/" ? activeClass : ""
+                                            }`}
                                         >
                                             <ChevronRightIcon height="0.5em" />
-                                            My Account
+                                            Accounts
                                         </a>
                                     </li>
                                     <li className="px-4 py-2 rounded hover:bg-gray-200">
@@ -153,24 +145,6 @@ export const Header: React.FC = () => {
                                         >
                                             <ChevronRightIcon height="0.5em" />
                                             Transactions
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-2 rounded hover:bg-gray-200">
-                                        <a
-                                            href="#"
-                                            className="flex items-center gap-4"
-                                        >
-                                            <ChevronRightIcon height="0.5em" />
-                                            Cards
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-2 rounded hover:bg-gray-200">
-                                        <a
-                                            href="#"
-                                            className="flex items-center gap-4"
-                                        >
-                                            <ChevronRightIcon height="0.5em" />
-                                            Offers
                                         </a>
                                     </li>
                                 </ul>
