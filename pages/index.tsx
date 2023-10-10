@@ -1,15 +1,9 @@
 import React from "react";
 
-import { Container, Footer, Header, Main } from "@components";
+import { Home } from "@components";
 
-const Home: React.FC = () => {
-    return (
-        <Container className="bg-gradient-to-br from-gray-100 to-gray-100">
-            <Header />
-            <Main />
-            <Footer />
-        </Container>
-    );
+const HomePage: React.FC = () => {
+    return <Home />;
 };
 
-export default Home;
+export default HomePage;
